@@ -32,6 +32,9 @@ jobs:
       - name: Show admonish version
         run: mdbook-admonish --version
 
+      - name: Show file tree
+        run: ls -R
+
       - name: Build
         run: mdbook build
 
