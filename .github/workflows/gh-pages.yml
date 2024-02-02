@@ -11,15 +11,16 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: jontze/action-mdbook@v1
+      - uses: jontze/action-mdbook@v3
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           use-linkcheck: true
           use-mermaid: false
           use-toc: true
           use-opengh: true
+          use-admonish: true
       - name: Show mdbook version
         run: mdbook --version
       - name: Show linkchecker version
@@ -28,6 +29,8 @@ jobs:
         run: mdbook-toc --version
       - name: Show open-on-gh version
         run: mdbook-open-on-gh --version
+      - name: Show admonish version
+        run: mdbook-admonish --version
 
       - name: Build
         run: mdbook build
