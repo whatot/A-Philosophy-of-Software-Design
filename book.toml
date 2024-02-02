@@ -9,6 +9,10 @@ description = "A Philosophy of Software Design"
 [build]
 create-missing = false
 
+[output.html]
+print.enable = true
+
 [output.epub]
+optional = true
 no-section-label = true
-cover-image = "cover.png"
+cover-image = "images/cover.png"

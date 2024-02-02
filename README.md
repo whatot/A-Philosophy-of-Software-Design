@@ -9,3 +9,11 @@
 > 第二版(2021 版)新增内容：https://web.stanford.edu/~ouster/cgi-bin/aposd2ndEdExtract.pdf
 
 中文在线阅读地址：https://go7hic.github.io/A-Philosophy-of-Software-Design/#/
+
+## mdbook about
+
+```shell
+cargo install mdbook
+cargo install mdbook-epub
+cargo install mdbook-pdf
+```

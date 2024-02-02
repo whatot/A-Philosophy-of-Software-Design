@@ -29,9 +29,6 @@ jobs:
       - name: Show open-on-gh version
         run: mdbook-open-on-gh --version
 
-      - name: List all files
-        run: ls -R
-
       - name: Build
         run: mdbook build
 
