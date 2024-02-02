@@ -1,0 +1,6 @@
+[book]
+authors = ["John Ousterhout"]
+language = "zh"
+multilingual = false
+src = "docs"
+title = "软件设计哲学"
