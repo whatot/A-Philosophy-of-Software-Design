@@ -30,7 +30,7 @@ jobs:
         run: mdbook-open-on-gh --version
 
       - name: List all files
-        run: ln -R
+        run: ls -R
 
       - name: Build
         run: mdbook build
