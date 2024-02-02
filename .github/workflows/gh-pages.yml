@@ -33,7 +33,7 @@ jobs:
         run: mdbook-admonish --version
 
       - name: Link summary files to right name
-        run: ln -s summary.md SUMMARY.md
+        run: ln -s docs/summary.md docs/SUMMARY.md
 
       - name: Build
         run: mdbook build
