@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>第一章：介绍 - 软件设计哲学</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="A Philosophy of Software Design">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> 前言</a></li><li class="chapter-item expanded "><a href="ch1.html" class="active"><strong aria-hidden="true">2.</strong> 第一章：介绍</a></li><li class="chapter-item expanded "><a href="ch2.html"><strong aria-hidden="true">3.</strong> 第二章：复杂性的本质</a></li><li class="chapter-item expanded "><a href="ch3.html"><strong aria-hidden="true">4.</strong> 第三章：工作代码是不够的（战略与战术编程）</a></li><li class="chapter-item expanded "><a href="ch4.html"><strong aria-hidden="true">5.</strong> 第四章：模块应该是深的</a></li><li class="chapter-item expanded "><a href="ch5.html"><strong aria-hidden="true">6.</strong> 第五章：信息隐藏(和泄露)</a></li><li class="chapter-item expanded "><a href="ch6.html"><strong aria-hidden="true">7.</strong> 第六章：通用模块更深入</a></li><li class="chapter-item expanded "><a href="ch7.html"><strong aria-hidden="true">8.</strong> 第七章: 不同的层，不同的抽象</a></li><li class="chapter-item expanded "><a href="ch8.html"><strong aria-hidden="true">9.</strong> 第八章: 降低复杂性</a></li><li class="chapter-item expanded "><a href="ch9.html"><strong aria-hidden="true">10.</strong> 第九章: 在一起更好还是分开更好？</a></li><li class="chapter-item expanded "><a href="ch10.html"><strong aria-hidden="true">11.</strong> 第十章: 定义不存在的错误</a></li><li class="chapter-item expanded "><a href="ch11.html"><strong aria-hidden="true">12.</strong> 第十一章: 设计它两次</a></li><li class="chapter-item expanded "><a href="ch12.html"><strong aria-hidden="true">13.</strong> 第十二章: 为什么写注释？四个理由</a></li><li class="chapter-item expanded "><a href="ch13.html"><strong aria-hidden="true">14.</strong> 第十三章: 注释应该描述代码中不明显的内容</a></li><li class="chapter-item expanded "><a href="ch14.html"><strong aria-hidden="true">15.</strong> 第十四章: 选择的名字</a></li><li class="chapter-item expanded "><a href="ch15.html"><strong aria-hidden="true">16.</strong> 第十五章: 先写注释</a></li><li class="chapter-item expanded "><a href="ch16.html"><strong aria-hidden="true">17.</strong> 第十六章: 修改现有的代码</a></li><li class="chapter-item expanded "><a href="ch17.html"><strong aria-hidden="true">18.</strong> 第十七章: 一致性</a></li><li class="chapter-item expanded "><a href="ch18.html"><strong aria-hidden="true">19.</strong> 第十八章: 代码应该是显而易见的</a></li><li class="chapter-item expanded "><a href="ch19.html"><strong aria-hidden="true">20.</strong> 第十九章: 软件发展趋势</a></li><li class="chapter-item expanded "><a href="ch20.html"><strong aria-hidden="true">21.</strong> 第二十章: 设计性能</a></li><li class="chapter-item expanded "><a href="ch21.html"><strong aria-hidden="true">22.</strong> 第二十一章: 结论</a></li><li class="chapter-item expanded "><a href="final.html"><strong aria-hidden="true">23.</strong> 总结</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">软件设计哲学</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="第一章介绍"><a class="header" href="#第一章介绍">第一章：介绍</a></h1>
+<p>编写计算机软件是人类历史上最纯粹的创作活动之一。程序员不受诸如物理定律等实际限制的约束。我们可以用现实世界中永远不会存在的行为创建令人兴奋的虚拟世界。编程不需要很高的身体技能或协调能力，例如芭蕾或篮球。所有编程都需要具有创造力的头脑和组织思想的能力。如果您可以可视化系统，则可以在计算机程序中实现它。</p>
+<p>这意味着编写软件的最大限制是我们了解所创建系统的能力。随着程序的发展和获得更多功能，它变得复杂，其组件之间具有微妙的依赖性。随着时间的流逝，复杂性不断累积，程序员在修改系统时将所有相关因素牢记在心中变得越来越难。这会减慢开发速度并导致错误，从而进一步延缓开发速度并增加成本。在任何程序的生命周期中，复杂性都会不可避免地增加。程序越大，工作的人越多，管理复杂性就越困难。</p>
+<p>好的开发工具可以帮助我们应对复杂性，并且在过去的几十年中已经创建了许多出色的工具。但是，仅凭工具我们只能做些事情。如果我们想简化编写软件的过程，从而可以更便宜地构建功能更强大的系统，则必须找到简化软件的方法。尽管我们尽了最大努力，但复杂度仍会随着时间的推移而增加，但是更简单的设计使我们能够在复杂性压倒性优势之前构建更大，功能更强大的系统。</p>
+<p>有两种解决复杂性的通用方法，这两种方法都将在本书中进行讨论。</p>
+<ul>
+<li><strong>第一种方法是通过使代码更简单和更明显来消除复杂性。例如，可以通过消除特殊情况或以一致的方式使用标识符来降低复杂性。</strong></li>
+<li><strong>解决复杂性的第二种方法是封装它，以便程序员可以在系统上工作而不会立即暴露其所有复杂性。这种方法称为模块化设计。在模块化设计中，软件系统分为模块，例如面向对象语言的类。这些模块被设计为彼此相对独立，以便程序员可以在一个模块上工作而不必了解其他模块的细节。</strong></li>
+</ul>
+<p>由于软件具有很好的延展性，因此软件设计是一个贯穿软件系统整个生命周期的连续过程。这使得软件设计与诸如建筑物，船舶或桥梁的物理系统的设计不同。但是，并非总是以这种方式查看软件设计。在编程的大部分历史中，设计都集中在项目的开始，就像其他工程学科一样。这种方法的极端称为瀑布模型，该模型将项目划分为离散的阶段，例如需求定义，设计，编码，测试和维护。在瀑布模型中，每个阶段都在下一阶段开始之前完成；在许多情况下，每个阶段都由不同的人负责。在设计阶段，立即设计整个系统。</p>
+<p>不幸的是，瀑布模型很少适用于软件。软件系统本质上比物理系统复杂。在构建任何东西之前，不可能充分可视化大型软件系统的设计，以了解其所有含义。结果，初始设计将有许多问题。在实施良好之前，问题不会变得明显。但是，瀑布模型的结构此时无法适应主要的设计更改（例如，设计师可能已转移到其他项目）。因此，开发人员尝试在不改变整体设计的情况下解决问题。这导致复杂性的爆炸式增长。</p>
+<p>由于这些问题，当今大多数软件开发项目都使用诸如敏捷开发之类的增量方法，其中初始设计着重于整体功能的一小部分。设计，实施和评估此子集。发现和纠正原始设计的问题，然后设计，实施和评估更多功能。每次迭代都会暴露现有设计的问题，这些问题在设计下一组功能之前就已得到解决。通过以这种方式扩展设计，可以在系统仍然很小的情况下解决初始设计的问题。较新的功能受益于较早功能的实施过程中获得的经验，因此问题较少。</p>
+<p>增量方法适用于软件，因为软件具有足够的延展性，可以在实施过程中进行重大的设计更改。相比之下，对物理系统而言，主要的设计更改更具挑战性：例如，在建筑过程中更改支撑桥梁的塔架数量不切实际。</p>
+<p>增量开发意味着永远不会完成软件设计。设计在系统的整个生命周期中不断发生：开发人员应始终在思考设计问题。增量开发还意味着不断的重新设计。系统或组件的初始设计几乎从来都不是最好的。经验不可避免地显示出更好的做事方式。作为软件开发人员，您应该始终在寻找机会来改进正在开发的系统的设计，并且应该计划将部分时间花费在设计改进上。</p>
+<p>如果软件开发人员应始终考虑设计问题，而降低复杂性是软件设计中最重要的要素，则软件开发人员应始终考虑复杂性。<strong>这本书是关于如何使用复杂性来指导软件设计的整个生命周期。</strong></p>
+<p>这本书有两个总体目标。</p>
+<ul>
+<li>首先是描述软件复杂性的性质：“复杂性”是什么意思，为什么重要，以及当程序具有不必要的复杂性时如何识别？</li>
+<li>本书的第二个也是更具挑战性的目标是介绍可在软件开发过程中使用的技术，以最大程度地减少复杂性。</li>
+</ul>
+<p>不幸的是，没有简单的方法可以保证出色的软件设计。取而代之的是，我将提出一些与哲学紧密相关的高级概念，例如“类应该很深”或“定义不存在的错误”。这些概念可能不会立即确定最佳设计，但您可以使用它们来比较设计备选方案并指导您探索设计空间。</p>
+<h2 id="11-如何使用这本书"><a class="header" href="#11-如何使用这本书">1.1 如何使用这本书</a></h2>
+<p>这里描述的许多设计原则有些抽象，因此如果不看实际的代码，可能很难理解它们。找到足够小的示例以包含在书中，但是又足够大以说明真实系统的问题是一个挑战（如果遇到好的示例，请发给我）。因此，这本书可能不足以让您学习如何应用这些原理。</p>
+<p>使用本书的最佳方法是与代码审查结合使用。阅读其他人的代码时，请考虑它是否符合此处讨论的概念，以及它与代码的复杂性之间的关系。在别人的代码中比在您的代码中更容易看到设计问题。您可以使用此处描述的红色标记来发现问题并提出改进建议。查看代码还将使您接触到新的设计方法和编程技术。</p>
+<p>改善设计技能的最好方法之一就是学会识别危险信号：信号表明一段代码可能比需要的复杂。在本书的过程中，我将指出一些危险信号，这些危险信号指示与每个主要设计问题有关的问题；最重要的内容总结在书的后面。然后，您可以在编码时使用它们：当看到红色标记时，停下来寻找可消除问题的替代设计。当您第一次尝试这种方法时，您可能必须尝试几种设计替代方案，然后才能找到消除危险信号的方案。不要轻易放弃：解决问题之前尝试的替代方法越多，您就会学到更多。随着时间的流逝，您会发现代码中的危险信号越来越少，并且您的设计越来越清晰。</p>
+<p>在应用本书中的思想时，务必要节制和谨慎。每条规则都有例外，每条原则都有其局限性。如果您将任何设计创意都发挥到极致，那么您可能会陷入困境。精美的设计反映了相互竞争的思想和方法之间的平衡。有几章的标题为“太过分”，它们描述了如何在做得过大的事情上识别自己。</p>
+<p>本书中几乎所有示例都是使用 Java 或 C++ 编写的，并且大部分讨论都是针对以面向对象的语言设计类的。但是，这些想法也适用于其他领域。几乎所有与方法有关的思想也可以应用于没有面向对象功能的语言中的功能，例如 C。设计思想还适用于除类之外的模块，例如子系统或网络服务。</p>
+<p>在这种背景下，让我们详细讨论导致复杂性的原因以及如何简化软件系统。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="preface.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="ch2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="preface.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="ch2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
