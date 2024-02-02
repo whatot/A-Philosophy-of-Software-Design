@@ -2,7 +2,7 @@
 
 《软件设计哲学》(2018-2021)
 
-![cover](./cover.png)
+![cover](./docs/images/cover.png)
 
 > 英文版本(2018 第一版)在线地址：https://milkov.tech/assets/psd.pdf
 
@@ -15,5 +15,7 @@
 ```shell
 cargo install mdbook
 cargo install mdbook-epub
-cargo install mdbook-pdf
+
+mdbook build
+mdbook serve
 ```
