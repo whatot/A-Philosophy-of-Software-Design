@@ -4,3 +4,11 @@ language = "zh"
 multilingual = false
 src = "docs"
 title = "软件设计哲学"
+description = "A Philosophy of Software Design"
+
+[build]
+create-missing = false
+
+[output.epub]
+no-section-label = true
+cover-image = "cover.png"

@@ -32,8 +32,8 @@ jobs:
       - name: Show admonish version
         run: mdbook-admonish --version
 
-      - name: Show file tree
-        run: ls -R
+      - name: Link summary files to right name
+        run: ln -s summary.md SUMMARY.md
 
       - name: Build
         run: mdbook build

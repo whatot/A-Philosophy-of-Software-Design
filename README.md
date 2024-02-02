@@ -2,7 +2,7 @@
 
 《软件设计哲学》(2018-2021)
 
-![cover](./docs/images/cover.png)
+![cover](./cover.png)
 
 > 英文版本(2018 第一版)在线地址：https://milkov.tech/assets/psd.pdf
 
