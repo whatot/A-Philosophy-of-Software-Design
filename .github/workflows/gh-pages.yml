@@ -20,7 +20,6 @@ jobs:
           use-mermaid: false
           use-toc: true
           use-opengh: true
-          use-admonish: true
       - name: Show mdbook version
         run: mdbook --version
       - name: Show linkchecker version
@@ -29,11 +28,9 @@ jobs:
         run: mdbook-toc --version
       - name: Show open-on-gh version
         run: mdbook-open-on-gh --version
-      - name: Show admonish version
-        run: mdbook-admonish --version
 
-      - name: Link summary files to right name
-        run: ln -s docs/summary.md docs/SUMMARY.md
+      - name: List all files
+        run: ln -R
 
       - name: Build
         run: mdbook build
