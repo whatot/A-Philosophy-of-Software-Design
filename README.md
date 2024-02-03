@@ -4,10 +4,11 @@
 
 ![cover](./docs/images/cover.png)
 
-## 原版地址
+## 上游地址
 
 - 2018 英文第一版，在线地址：https://milkov.tech/assets/psd.pdf
 - 2021 英文第二版，新增内容：https://web.stanford.edu/~ouster/cgi-bin/aposd2ndEdExtract.pdf
+- 中文翻译版上游地址：https://github.com/Go7hic/A-Philosophy-of-Software-Design
 
 ## 作者
 
